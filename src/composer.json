@@ -1,5 +1,5 @@
 {
-    "name": "BenefiaPakietySdkNew",
+    "name": "benefia/benefia-api",
     "description": "Package generated from http://wstest3.benefia.pl/ws_pakiety_new/PackagesService.svc?wsdl using wsdltophp/packagegenerator",
     "require": {
         "php": ">=7.4",
