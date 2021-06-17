@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace BenefiaNew\ServiceType;
 
-use BenefiaNew\StructType\Calculate;
+use BenefiaNew\StructType\Calculate as StructTypeCalculate;
 use BenefiaNew\StructType\CalculateApplication;
 use BenefiaNew\StructType\CalculateMultioffer;
 use SoapFault;
@@ -24,7 +24,7 @@ class Calculate extends AbstractSoapClientBase
      * @param \StructType\Calculate $parameters
      * @return \StructType\CalculateResponse|bool
      */
-    public function Calculate(Calculate $parameters)
+    public function Calculate(StructTypeCalculate $parameters)
     {
         try {
             $this->setResult($resultCalculate = $this->getSoapClient()->__soapCall('Calculate', [
