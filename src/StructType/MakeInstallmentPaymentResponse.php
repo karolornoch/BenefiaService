@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\MakeInstallmentPaymentResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,13 +21,13 @@ class MakeInstallmentPaymentResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\MakeInstallmentPaymentResult|null
      */
-    protected ?\StructType\MakeInstallmentPaymentResult $MakeInstallmentPaymentResult = null;
+    protected ?MakeInstallmentPaymentResult $MakeInstallmentPaymentResult = null;
     /**
      * Constructor method for MakeInstallmentPaymentResponse
      * @uses MakeInstallmentPaymentResponse::setMakeInstallmentPaymentResult()
      * @param \StructType\MakeInstallmentPaymentResult $makeInstallmentPaymentResult
      */
-    public function __construct(?\StructType\MakeInstallmentPaymentResult $makeInstallmentPaymentResult = null)
+    public function __construct(?MakeInstallmentPaymentResult $makeInstallmentPaymentResult = null)
     {
         $this
             ->setMakeInstallmentPaymentResult($makeInstallmentPaymentResult);
@@ -35,7 +36,7 @@ class MakeInstallmentPaymentResponse extends AbstractStructBase
      * Get MakeInstallmentPaymentResult value
      * @return \StructType\MakeInstallmentPaymentResult|null
      */
-    public function getMakeInstallmentPaymentResult(): ?\StructType\MakeInstallmentPaymentResult
+    public function getMakeInstallmentPaymentResult(): ?MakeInstallmentPaymentResult
     {
         return $this->MakeInstallmentPaymentResult;
     }
@@ -44,7 +45,7 @@ class MakeInstallmentPaymentResponse extends AbstractStructBase
      * @param \StructType\MakeInstallmentPaymentResult $makeInstallmentPaymentResult
      * @return \StructType\MakeInstallmentPaymentResponse
      */
-    public function setMakeInstallmentPaymentResult(?\StructType\MakeInstallmentPaymentResult $makeInstallmentPaymentResult = null): self
+    public function setMakeInstallmentPaymentResult(?MakeInstallmentPaymentResult $makeInstallmentPaymentResult = null): self
     {
         $this->MakeInstallmentPaymentResult = $makeInstallmentPaymentResult;
         

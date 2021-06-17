@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\ArrayType\ArrayOfConsentResult;
+use BenefiaNew\ArrayType\MultiofferData;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -28,7 +30,7 @@ class AdditionalSalesProcessData extends AbstractStructBase
      * - minOccurs: 0
      * @var \ArrayType\ArrayOfConsentResult|null
      */
-    protected ?\ArrayType\ArrayOfConsentResult $ConsentResults = null;
+    protected ?ArrayOfConsentResult $ConsentResults = null;
     /**
      * The MultiofferData
      * Meta information extracted from the WSDL
@@ -36,7 +38,7 @@ class AdditionalSalesProcessData extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\MultiofferData|null
      */
-    protected ?\StructType\MultiofferData $MultiofferData = null;
+    protected ?MultiofferData $MultiofferData = null;
     /**
      * Constructor method for AdditionalSalesProcessData
      * @uses AdditionalSalesProcessData::setOnlyDataUpdate()
@@ -46,7 +48,7 @@ class AdditionalSalesProcessData extends AbstractStructBase
      * @param \ArrayType\ArrayOfConsentResult $consentResults
      * @param \StructType\MultiofferData $multiofferData
      */
-    public function __construct(bool $onlyDataUpdate, ?\ArrayType\ArrayOfConsentResult $consentResults = null, ?\StructType\MultiofferData $multiofferData = null)
+    public function __construct(bool $onlyDataUpdate, ?ArrayOfConsentResult $consentResults = null, ?MultiofferData $multiofferData = null)
     {
         $this
             ->setOnlyDataUpdate($onlyDataUpdate)
@@ -80,7 +82,7 @@ class AdditionalSalesProcessData extends AbstractStructBase
      * Get ConsentResults value
      * @return \ArrayType\ArrayOfConsentResult|null
      */
-    public function getConsentResults(): ?\ArrayType\ArrayOfConsentResult
+    public function getConsentResults(): ?ArrayOfConsentResult
     {
         return $this->ConsentResults;
     }
@@ -89,7 +91,7 @@ class AdditionalSalesProcessData extends AbstractStructBase
      * @param \ArrayType\ArrayOfConsentResult $consentResults
      * @return \StructType\AdditionalSalesProcessData
      */
-    public function setConsentResults(?\ArrayType\ArrayOfConsentResult $consentResults = null): self
+    public function setConsentResults(?ArrayOfConsentResult $consentResults = null): self
     {
         $this->ConsentResults = $consentResults;
         
@@ -99,7 +101,7 @@ class AdditionalSalesProcessData extends AbstractStructBase
      * Get MultiofferData value
      * @return \StructType\MultiofferData|null
      */
-    public function getMultiofferData(): ?\StructType\MultiofferData
+    public function getMultiofferData(): ?MultiofferData
     {
         return $this->MultiofferData;
     }
@@ -108,7 +110,7 @@ class AdditionalSalesProcessData extends AbstractStructBase
      * @param \StructType\MultiofferData $multiofferData
      * @return \StructType\AdditionalSalesProcessData
      */
-    public function setMultiofferData(?\StructType\MultiofferData $multiofferData = null): self
+    public function setMultiofferData(?MultiofferData $multiofferData = null): self
     {
         $this->MultiofferData = $multiofferData;
         

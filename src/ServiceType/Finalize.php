@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ServiceType;
+namespace BenefiaNew\ServiceType;
 
+use BenefiaNew\StructType\FinalizeApplication;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -21,7 +22,7 @@ class Finalize extends AbstractSoapClientBase
      * @param \StructType\FinalizeApplication $parameters
      * @return \StructType\FinalizeApplicationResponse|bool
      */
-    public function FinalizeApplication(\StructType\FinalizeApplication $parameters)
+    public function FinalizeApplication(FinalizeApplication $parameters)
     {
         try {
             $this->setResult($resultFinalizeApplication = $this->getSoapClient()->__soapCall('FinalizeApplication', [

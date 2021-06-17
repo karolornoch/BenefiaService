@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\ArrayType\ArrayOfSelectedVariant;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -28,7 +29,7 @@ class MultiofferData extends AbstractStructBase
      * - minOccurs: 0
      * @var \ArrayType\ArrayOfSelectedVariant|null
      */
-    protected ?\ArrayType\ArrayOfSelectedVariant $SelectedVariants = null;
+    protected ?ArrayOfSelectedVariant $SelectedVariants = null;
     /**
      * Constructor method for MultiofferData
      * @uses MultiofferData::setFlowId()
@@ -36,7 +37,7 @@ class MultiofferData extends AbstractStructBase
      * @param string $flowId
      * @param \ArrayType\ArrayOfSelectedVariant $selectedVariants
      */
-    public function __construct(?string $flowId = null, ?\ArrayType\ArrayOfSelectedVariant $selectedVariants = null)
+    public function __construct(?string $flowId = null, ?ArrayOfSelectedVariant $selectedVariants = null)
     {
         $this
             ->setFlowId($flowId)
@@ -69,7 +70,7 @@ class MultiofferData extends AbstractStructBase
      * Get SelectedVariants value
      * @return \ArrayType\ArrayOfSelectedVariant|null
      */
-    public function getSelectedVariants(): ?\ArrayType\ArrayOfSelectedVariant
+    public function getSelectedVariants(): ?ArrayOfSelectedVariant
     {
         return $this->SelectedVariants;
     }
@@ -78,7 +79,7 @@ class MultiofferData extends AbstractStructBase
      * @param \ArrayType\ArrayOfSelectedVariant $selectedVariants
      * @return \StructType\MultiofferData
      */
-    public function setSelectedVariants(?\ArrayType\ArrayOfSelectedVariant $selectedVariants = null): self
+    public function setSelectedVariants(?ArrayOfSelectedVariant $selectedVariants = null): self
     {
         $this->SelectedVariants = $selectedVariants;
         

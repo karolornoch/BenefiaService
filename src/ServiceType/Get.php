@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ServiceType;
+namespace BenefiaNew\ServiceType;
 
+use BenefiaNew\StructType\GetApplicationStatus;
+use BenefiaNew\StructType\GetSalesProcessConfiguration;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -21,7 +23,7 @@ class Get extends AbstractSoapClientBase
      * @param \StructType\GetSalesProcessConfiguration $parameters
      * @return \StructType\GetSalesProcessConfigurationResponse|bool
      */
-    public function GetSalesProcessConfiguration(\StructType\GetSalesProcessConfiguration $parameters)
+    public function GetSalesProcessConfiguration(GetSalesProcessConfiguration $parameters)
     {
         try {
             $this->setResult($resultGetSalesProcessConfiguration = $this->getSoapClient()->__soapCall('GetSalesProcessConfiguration', [
@@ -43,7 +45,7 @@ class Get extends AbstractSoapClientBase
      * @param \StructType\GetApplicationStatus $parameters
      * @return \StructType\GetApplicationStatusResponse|bool
      */
-    public function GetApplicationStatus(\StructType\GetApplicationStatus $parameters)
+    public function GetApplicationStatus(GetApplicationStatus $parameters)
     {
         try {
             $this->setResult($resultGetApplicationStatus = $this->getSoapClient()->__soapCall('GetApplicationStatus', [

@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ArrayType;
+namespace BenefiaNew\ArrayType;
 
+use BenefiaNew\StructType\ConsentResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -93,7 +94,7 @@ class ArrayOfConsentResult extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::current()
      * @return \StructType\ConsentResult|null
      */
-    public function current(): ?\StructType\ConsentResult
+    public function current(): ?ConsentResult
     {
         return parent::current();
     }
@@ -103,7 +104,7 @@ class ArrayOfConsentResult extends AbstractStructArrayBase
      * @param int $index
      * @return \StructType\ConsentResult|null
      */
-    public function item($index): ?\StructType\ConsentResult
+    public function item($index): ?ConsentResult
     {
         return parent::item($index);
     }
@@ -112,7 +113,7 @@ class ArrayOfConsentResult extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::first()
      * @return \StructType\ConsentResult|null
      */
-    public function first(): ?\StructType\ConsentResult
+    public function first(): ?ConsentResult
     {
         return parent::first();
     }
@@ -121,7 +122,7 @@ class ArrayOfConsentResult extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::last()
      * @return \StructType\ConsentResult|null
      */
-    public function last(): ?\StructType\ConsentResult
+    public function last(): ?ConsentResult
     {
         return parent::last();
     }
@@ -131,7 +132,7 @@ class ArrayOfConsentResult extends AbstractStructArrayBase
      * @param int $offset
      * @return \StructType\ConsentResult|null
      */
-    public function offsetGet($offset): ?\StructType\ConsentResult
+    public function offsetGet($offset): ?ConsentResult
     {
         return parent::offsetGet($offset);
     }
@@ -145,7 +146,7 @@ class ArrayOfConsentResult extends AbstractStructArrayBase
     public function add($item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\ConsentResult) {
+        if (!$item instanceof ConsentResult) {
             throw new InvalidArgumentException(sprintf('The ConsentResult property can only contain items of type \StructType\ConsentResult, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         return parent::add($item);

@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\AdditionalSalesProcessData;
+use BenefiaNew\StructType\Input;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,7 +22,7 @@ class CalculateMultioffer extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\Input|null
      */
-    protected ?\StructType\Input $input = null;
+    protected ?Input $input = null;
     /**
      * The additionalProcessData
      * Meta information extracted from the WSDL
@@ -28,7 +30,7 @@ class CalculateMultioffer extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\AdditionalSalesProcessData|null
      */
-    protected ?\StructType\AdditionalSalesProcessData $additionalProcessData = null;
+    protected ?AdditionalSalesProcessData $additionalProcessData = null;
     /**
      * Constructor method for CalculateMultioffer
      * @uses CalculateMultioffer::setInput()
@@ -36,7 +38,7 @@ class CalculateMultioffer extends AbstractStructBase
      * @param \StructType\Input $input
      * @param \StructType\AdditionalSalesProcessData $additionalProcessData
      */
-    public function __construct(?\StructType\Input $input = null, ?\StructType\AdditionalSalesProcessData $additionalProcessData = null)
+    public function __construct(?Input $input = null, ?AdditionalSalesProcessData $additionalProcessData = null)
     {
         $this
             ->setInput($input)
@@ -46,7 +48,7 @@ class CalculateMultioffer extends AbstractStructBase
      * Get input value
      * @return \StructType\Input|null
      */
-    public function getInput(): ?\StructType\Input
+    public function getInput(): ?Input
     {
         return $this->input;
     }
@@ -55,7 +57,7 @@ class CalculateMultioffer extends AbstractStructBase
      * @param \StructType\Input $input
      * @return \StructType\CalculateMultioffer
      */
-    public function setInput(?\StructType\Input $input = null): self
+    public function setInput(?Input $input = null): self
     {
         $this->input = $input;
         
@@ -65,7 +67,7 @@ class CalculateMultioffer extends AbstractStructBase
      * Get additionalProcessData value
      * @return \StructType\AdditionalSalesProcessData|null
      */
-    public function getAdditionalProcessData(): ?\StructType\AdditionalSalesProcessData
+    public function getAdditionalProcessData(): ?AdditionalSalesProcessData
     {
         return $this->additionalProcessData;
     }
@@ -74,7 +76,7 @@ class CalculateMultioffer extends AbstractStructBase
      * @param \StructType\AdditionalSalesProcessData $additionalProcessData
      * @return \StructType\CalculateMultioffer
      */
-    public function setAdditionalProcessData(?\StructType\AdditionalSalesProcessData $additionalProcessData = null): self
+    public function setAdditionalProcessData(?AdditionalSalesProcessData $additionalProcessData = null): self
     {
         $this->additionalProcessData = $additionalProcessData;
         

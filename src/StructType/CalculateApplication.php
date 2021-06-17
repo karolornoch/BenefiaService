@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\AdditionalSalesProcessData;
+use BenefiaNew\StructType\Input;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,7 +22,7 @@ class CalculateApplication extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\Input|null
      */
-    protected ?\StructType\Input $input = null;
+    protected ?Input $input = null;
     /**
      * The calculationId
      * Meta information extracted from the WSDL
@@ -48,7 +50,7 @@ class CalculateApplication extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\AdditionalSalesProcessData|null
      */
-    protected ?\StructType\AdditionalSalesProcessData $additionalProcessData = null;
+    protected ?AdditionalSalesProcessData $additionalProcessData = null;
     /**
      * Constructor method for CalculateApplication
      * @uses CalculateApplication::setInput()
@@ -60,7 +62,7 @@ class CalculateApplication extends AbstractStructBase
      * @param string $applicationOvertNumber
      * @param \StructType\AdditionalSalesProcessData $additionalProcessData
      */
-    public function __construct(?\StructType\Input $input = null, ?string $calculationId, ?string $applicationOvertNumber = null, ?\StructType\AdditionalSalesProcessData $additionalProcessData = null)
+    public function __construct(?Input $input = null, ?string $calculationId, ?string $applicationOvertNumber = null, ?AdditionalSalesProcessData $additionalProcessData = null)
     {
         $this
             ->setInput($input)
@@ -72,7 +74,7 @@ class CalculateApplication extends AbstractStructBase
      * Get input value
      * @return \StructType\Input|null
      */
-    public function getInput(): ?\StructType\Input
+    public function getInput(): ?Input
     {
         return $this->input;
     }
@@ -81,7 +83,7 @@ class CalculateApplication extends AbstractStructBase
      * @param \StructType\Input $input
      * @return \StructType\CalculateApplication
      */
-    public function setInput(?\StructType\Input $input = null): self
+    public function setInput(?Input $input = null): self
     {
         $this->input = $input;
         
@@ -141,7 +143,7 @@ class CalculateApplication extends AbstractStructBase
      * Get additionalProcessData value
      * @return \StructType\AdditionalSalesProcessData|null
      */
-    public function getAdditionalProcessData(): ?\StructType\AdditionalSalesProcessData
+    public function getAdditionalProcessData(): ?AdditionalSalesProcessData
     {
         return $this->additionalProcessData;
     }
@@ -150,7 +152,7 @@ class CalculateApplication extends AbstractStructBase
      * @param \StructType\AdditionalSalesProcessData $additionalProcessData
      * @return \StructType\CalculateApplication
      */
-    public function setAdditionalProcessData(?\StructType\AdditionalSalesProcessData $additionalProcessData = null): self
+    public function setAdditionalProcessData(?AdditionalSalesProcessData $additionalProcessData = null): self
     {
         $this->additionalProcessData = $additionalProcessData;
         

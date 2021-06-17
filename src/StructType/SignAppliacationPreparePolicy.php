@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\AdditionalSalesProcessData;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -26,17 +27,17 @@ class SignAppliacationPreparePolicy extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\AdditionalSalesProcessData|null
+     * @var \BenefiaNew\StructType\AdditionalSalesProcessData|null
      */
-    protected ?\StructType\AdditionalSalesProcessData $additionalProcessData = null;
+    protected ?AdditionalSalesProcessData $additionalProcessData = null;
     /**
      * Constructor method for SignAppliacationPreparePolicy
      * @uses SignAppliacationPreparePolicy::setApplicationOvertNumber()
      * @uses SignAppliacationPreparePolicy::setAdditionalProcessData()
      * @param string $applicationOvertNumber
-     * @param \StructType\AdditionalSalesProcessData $additionalProcessData
+     * @param \BenefiaNew\StructType\AdditionalSalesProcessData $additionalProcessData
      */
-    public function __construct(?string $applicationOvertNumber = null, ?\StructType\AdditionalSalesProcessData $additionalProcessData = null)
+    public function __construct(?string $applicationOvertNumber = null, ?AdditionalSalesProcessData $additionalProcessData = null)
     {
         $this
             ->setApplicationOvertNumber($applicationOvertNumber)
@@ -53,7 +54,7 @@ class SignAppliacationPreparePolicy extends AbstractStructBase
     /**
      * Set applicationOvertNumber value
      * @param string $applicationOvertNumber
-     * @return \StructType\SignAppliacationPreparePolicy
+     * @return \BenefiaNew\StructType\SignAppliacationPreparePolicy
      */
     public function setApplicationOvertNumber(?string $applicationOvertNumber = null): self
     {
@@ -67,18 +68,18 @@ class SignAppliacationPreparePolicy extends AbstractStructBase
     }
     /**
      * Get additionalProcessData value
-     * @return \StructType\AdditionalSalesProcessData|null
+     * @return \BenefiaNew\StructType\AdditionalSalesProcessData|null
      */
-    public function getAdditionalProcessData(): ?\StructType\AdditionalSalesProcessData
+    public function getAdditionalProcessData(): ?AdditionalSalesProcessData
     {
         return $this->additionalProcessData;
     }
     /**
      * Set additionalProcessData value
-     * @param \StructType\AdditionalSalesProcessData $additionalProcessData
-     * @return \StructType\SignAppliacationPreparePolicy
+     * @param \BenefiaNew\StructType\AdditionalSalesProcessData $additionalProcessData
+     * @return \BenefiaNew\StructType\SignAppliacationPreparePolicy
      */
-    public function setAdditionalProcessData(?\StructType\AdditionalSalesProcessData $additionalProcessData = null): self
+    public function setAdditionalProcessData(?AdditionalSalesProcessData $additionalProcessData = null): self
     {
         $this->additionalProcessData = $additionalProcessData;
         

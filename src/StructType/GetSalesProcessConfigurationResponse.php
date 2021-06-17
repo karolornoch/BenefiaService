@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\SalesProcessConfiguration;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,13 +21,13 @@ class GetSalesProcessConfigurationResponse extends AbstractStructBase
      * - nillable: true
      * @var \StructType\SalesProcessConfiguration|null
      */
-    protected ?\StructType\SalesProcessConfiguration $GetSalesProcessConfigurationResult = null;
+    protected ?SalesProcessConfiguration $GetSalesProcessConfigurationResult = null;
     /**
      * Constructor method for GetSalesProcessConfigurationResponse
      * @uses GetSalesProcessConfigurationResponse::setGetSalesProcessConfigurationResult()
      * @param \StructType\SalesProcessConfiguration $getSalesProcessConfigurationResult
      */
-    public function __construct(?\StructType\SalesProcessConfiguration $getSalesProcessConfigurationResult = null)
+    public function __construct(?SalesProcessConfiguration $getSalesProcessConfigurationResult = null)
     {
         $this
             ->setGetSalesProcessConfigurationResult($getSalesProcessConfigurationResult);
@@ -38,7 +39,7 @@ class GetSalesProcessConfigurationResponse extends AbstractStructBase
      * removable from the request (nillable=true+minOccurs=0)
      * @return \StructType\SalesProcessConfiguration|null
      */
-    public function getGetSalesProcessConfigurationResult(): ?\StructType\SalesProcessConfiguration
+    public function getGetSalesProcessConfigurationResult(): ?SalesProcessConfiguration
     {
         return isset($this->GetSalesProcessConfigurationResult) ? $this->GetSalesProcessConfigurationResult : null;
     }
@@ -49,7 +50,7 @@ class GetSalesProcessConfigurationResponse extends AbstractStructBase
      * @param \StructType\SalesProcessConfiguration $getSalesProcessConfigurationResult
      * @return \StructType\GetSalesProcessConfigurationResponse
      */
-    public function setGetSalesProcessConfigurationResult(?\StructType\SalesProcessConfiguration $getSalesProcessConfigurationResult = null): self
+    public function setGetSalesProcessConfigurationResult(?SalesProcessConfiguration $getSalesProcessConfigurationResult = null): self
     {
         if (is_null($getSalesProcessConfigurationResult) || (is_array($getSalesProcessConfigurationResult) && empty($getSalesProcessConfigurationResult))) {
             unset($this->GetSalesProcessConfigurationResult);

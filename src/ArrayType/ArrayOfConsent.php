@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ArrayType;
+namespace BenefiaNew\ArrayType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructArrayBase;

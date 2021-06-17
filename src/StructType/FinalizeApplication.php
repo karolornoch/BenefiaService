@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\AdditionalSalesProcessData;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -44,7 +45,7 @@ class FinalizeApplication extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\AdditionalSalesProcessData|null
      */
-    protected ?\StructType\AdditionalSalesProcessData $additionalProcessData = null;
+    protected ?AdditionalSalesProcessData $additionalProcessData = null;
     /**
      * The nrWariantu
      * Meta information extracted from the WSDL
@@ -148,7 +149,7 @@ class FinalizeApplication extends AbstractStructBase
      * Get additionalProcessData value
      * @return \StructType\AdditionalSalesProcessData|null
      */
-    public function getAdditionalProcessData(): ?\StructType\AdditionalSalesProcessData
+    public function getAdditionalProcessData(): ?AdditionalSalesProcessData
     {
         return $this->additionalProcessData;
     }
@@ -157,7 +158,7 @@ class FinalizeApplication extends AbstractStructBase
      * @param \StructType\AdditionalSalesProcessData $additionalProcessData
      * @return \StructType\FinalizeApplication
      */
-    public function setAdditionalProcessData(?\StructType\AdditionalSalesProcessData $additionalProcessData = null): self
+    public function setAdditionalProcessData(?AdditionalSalesProcessData $additionalProcessData = null): self
     {
         $this->additionalProcessData = $additionalProcessData;
         

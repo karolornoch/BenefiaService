@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\PrintApplicationResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,13 +21,13 @@ class PrintApplicationResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\PrintApplicationResult|null
      */
-    protected ?\StructType\PrintApplicationResult $PrintApplicationResult = null;
+    protected ?PrintApplicationResult $PrintApplicationResult = null;
     /**
      * Constructor method for PrintApplicationResponse
      * @uses PrintApplicationResponse::setPrintApplicationResult()
      * @param \StructType\PrintApplicationResult $printApplicationResult
      */
-    public function __construct(?\StructType\PrintApplicationResult $printApplicationResult = null)
+    public function __construct(?PrintApplicationResult $printApplicationResult = null)
     {
         $this
             ->setPrintApplicationResult($printApplicationResult);
@@ -35,7 +36,7 @@ class PrintApplicationResponse extends AbstractStructBase
      * Get PrintApplicationResult value
      * @return \StructType\PrintApplicationResult|null
      */
-    public function getPrintApplicationResult(): ?\StructType\PrintApplicationResult
+    public function getPrintApplicationResult(): ?PrintApplicationResult
     {
         return $this->PrintApplicationResult;
     }
@@ -44,7 +45,7 @@ class PrintApplicationResponse extends AbstractStructBase
      * @param \StructType\PrintApplicationResult $printApplicationResult
      * @return \StructType\PrintApplicationResponse
      */
-    public function setPrintApplicationResult(?\StructType\PrintApplicationResult $printApplicationResult = null): self
+    public function setPrintApplicationResult(?PrintApplicationResult $printApplicationResult = null): self
     {
         $this->PrintApplicationResult = $printApplicationResult;
         

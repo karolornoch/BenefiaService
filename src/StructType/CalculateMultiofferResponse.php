@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\CalculateMultiofferResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,13 +21,13 @@ class CalculateMultiofferResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\CalculateMultiofferResult|null
      */
-    protected ?\StructType\CalculateMultiofferResult $CalculateMultiofferResult = null;
+    protected ?CalculateMultiofferResult $CalculateMultiofferResult = null;
     /**
      * Constructor method for CalculateMultiofferResponse
      * @uses CalculateMultiofferResponse::setCalculateMultiofferResult()
      * @param \StructType\CalculateMultiofferResult $calculateMultiofferResult
      */
-    public function __construct(?\StructType\CalculateMultiofferResult $calculateMultiofferResult = null)
+    public function __construct(?CalculateMultiofferResult $calculateMultiofferResult = null)
     {
         $this
             ->setCalculateMultiofferResult($calculateMultiofferResult);
@@ -35,7 +36,7 @@ class CalculateMultiofferResponse extends AbstractStructBase
      * Get CalculateMultiofferResult value
      * @return \StructType\CalculateMultiofferResult|null
      */
-    public function getCalculateMultiofferResult(): ?\StructType\CalculateMultiofferResult
+    public function getCalculateMultiofferResult(): ?CalculateMultiofferResult
     {
         return $this->CalculateMultiofferResult;
     }
@@ -44,7 +45,7 @@ class CalculateMultiofferResponse extends AbstractStructBase
      * @param \StructType\CalculateMultiofferResult $calculateMultiofferResult
      * @return \StructType\CalculateMultiofferResponse
      */
-    public function setCalculateMultiofferResult(?\StructType\CalculateMultiofferResult $calculateMultiofferResult = null): self
+    public function setCalculateMultiofferResult(?CalculateMultiofferResult $calculateMultiofferResult = null): self
     {
         $this->CalculateMultiofferResult = $calculateMultiofferResult;
         

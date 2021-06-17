@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\PrintPolicyResult
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,13 +21,13 @@ class PrintPolicyResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\PrintPolicyResult|null
      */
-    protected ?\StructType\PrintPolicyResult $PrintPolicyResult = null;
+    protected ?PrintPolicyResult $PrintPolicyResult = null;
     /**
      * Constructor method for PrintPolicyResponse
      * @uses PrintPolicyResponse::setPrintPolicyResult()
      * @param \StructType\PrintPolicyResult $printPolicyResult
      */
-    public function __construct(?\StructType\PrintPolicyResult $printPolicyResult = null)
+    public function __construct(?PrintPolicyResult $printPolicyResult = null)
     {
         $this
             ->setPrintPolicyResult($printPolicyResult);
@@ -35,7 +36,7 @@ class PrintPolicyResponse extends AbstractStructBase
      * Get PrintPolicyResult value
      * @return \StructType\PrintPolicyResult|null
      */
-    public function getPrintPolicyResult(): ?\StructType\PrintPolicyResult
+    public function getPrintPolicyResult(): ?PrintPolicyResult
     {
         return $this->PrintPolicyResult;
     }
@@ -44,7 +45,7 @@ class PrintPolicyResponse extends AbstractStructBase
      * @param \StructType\PrintPolicyResult $printPolicyResult
      * @return \StructType\PrintPolicyResponse
      */
-    public function setPrintPolicyResult(?\StructType\PrintPolicyResult $printPolicyResult = null): self
+    public function setPrintPolicyResult(?PrintPolicyResult $printPolicyResult = null): self
     {
         $this->PrintPolicyResult = $printPolicyResult;
         

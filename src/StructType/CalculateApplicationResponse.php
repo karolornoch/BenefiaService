@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\CalculateApplicationResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,13 +21,13 @@ class CalculateApplicationResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\CalculateApplicationResult|null
      */
-    protected ?\StructType\CalculateApplicationResult $CalculateApplicationResult = null;
+    protected ?CalculateApplicationResult $CalculateApplicationResult = null;
     /**
      * Constructor method for CalculateApplicationResponse
      * @uses CalculateApplicationResponse::setCalculateApplicationResult()
      * @param \StructType\CalculateApplicationResult $calculateApplicationResult
      */
-    public function __construct(?\StructType\CalculateApplicationResult $calculateApplicationResult = null)
+    public function __construct(?CalculateApplicationResult $calculateApplicationResult = null)
     {
         $this
             ->setCalculateApplicationResult($calculateApplicationResult);
@@ -35,7 +36,7 @@ class CalculateApplicationResponse extends AbstractStructBase
      * Get CalculateApplicationResult value
      * @return \StructType\CalculateApplicationResult|null
      */
-    public function getCalculateApplicationResult(): ?\StructType\CalculateApplicationResult
+    public function getCalculateApplicationResult(): ?CalculateApplicationResult
     {
         return $this->CalculateApplicationResult;
     }
@@ -44,7 +45,7 @@ class CalculateApplicationResponse extends AbstractStructBase
      * @param \StructType\CalculateApplicationResult $calculateApplicationResult
      * @return \StructType\CalculateApplicationResponse
      */
-    public function setCalculateApplicationResult(?\StructType\CalculateApplicationResult $calculateApplicationResult = null): self
+    public function setCalculateApplicationResult(?CalculateApplicationResult $calculateApplicationResult = null): self
     {
         $this->CalculateApplicationResult = $calculateApplicationResult;
         

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -53,7 +53,7 @@ class SelectedVariant extends AbstractStructBase
     /**
      * Set RiderCode value
      * @param string $riderCode
-     * @return \StructType\SelectedVariant
+     * @return \BenefiaNew\StructType\SelectedVariant
      */
     public function setRiderCode(?string $riderCode = null): self
     {
@@ -76,7 +76,7 @@ class SelectedVariant extends AbstractStructBase
     /**
      * Set VariantCode value
      * @param string $variantCode
-     * @return \StructType\SelectedVariant
+     * @return \BenefiaNew\StructType\SelectedVariant
      */
     public function setVariantCode(?string $variantCode = null): self
     {

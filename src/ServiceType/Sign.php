@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ServiceType;
+namespace BenefiaNew\ServiceType;
 
+use BenefiaNew\StructType\SignAppliacationPreparePolicy;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -18,10 +19,10 @@ class Sign extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SignAppliacationPreparePolicy $parameters
-     * @return \StructType\SignAppliacationPreparePolicyResponse|bool
+     * @param \BenefiaNew\StructType\SignAppliacationPreparePolicy $parameters
+     * @return \BenefiaNew\StructType\SignAppliacationPreparePolicyResponse|bool
      */
-    public function SignAppliacationPreparePolicy(\StructType\SignAppliacationPreparePolicy $parameters)
+    public function SignAppliacationPreparePolicy(SignAppliacationPreparePolicy $parameters)
     {
         try {
             $this->setResult($resultSignAppliacationPreparePolicy = $this->getSoapClient()->__soapCall('SignAppliacationPreparePolicy', [
@@ -38,7 +39,7 @@ class Sign extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\SignAppliacationPreparePolicyResponse
+     * @return \BenefiaNew\StructType\SignAppliacationPreparePolicyResponse
      */
     public function getResult()
     {

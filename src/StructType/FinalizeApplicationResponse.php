@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\FinalizeApplicationResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
+
 
 /**
  * This class stands for FinalizeApplicationResponse StructType
@@ -20,13 +22,13 @@ class FinalizeApplicationResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\FinalizeApplicationResult|null
      */
-    protected ?\StructType\FinalizeApplicationResult $FinalizeApplicationResult = null;
+    protected ?FinalizeApplicationResult $FinalizeApplicationResult = null;
     /**
      * Constructor method for FinalizeApplicationResponse
      * @uses FinalizeApplicationResponse::setFinalizeApplicationResult()
      * @param \StructType\FinalizeApplicationResult $finalizeApplicationResult
      */
-    public function __construct(?\StructType\FinalizeApplicationResult $finalizeApplicationResult = null)
+    public function __construct(?FinalizeApplicationResult $finalizeApplicationResult = null)
     {
         $this
             ->setFinalizeApplicationResult($finalizeApplicationResult);
@@ -35,7 +37,7 @@ class FinalizeApplicationResponse extends AbstractStructBase
      * Get FinalizeApplicationResult value
      * @return \StructType\FinalizeApplicationResult|null
      */
-    public function getFinalizeApplicationResult(): ?\StructType\FinalizeApplicationResult
+    public function getFinalizeApplicationResult(): ?FinalizeApplicationResult
     {
         return $this->FinalizeApplicationResult;
     }
@@ -44,7 +46,7 @@ class FinalizeApplicationResponse extends AbstractStructBase
      * @param \StructType\FinalizeApplicationResult $finalizeApplicationResult
      * @return \StructType\FinalizeApplicationResponse
      */
-    public function setFinalizeApplicationResult(?\StructType\FinalizeApplicationResult $finalizeApplicationResult = null): self
+    public function setFinalizeApplicationResult(?FinalizeApplicationResult $finalizeApplicationResult = null): self
     {
         $this->FinalizeApplicationResult = $finalizeApplicationResult;
         

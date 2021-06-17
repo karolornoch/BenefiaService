@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EnumType;
+namespace Benefia\EnumType;
 
 use WsdlToPhp\PackageBase\AbstractStructEnumBase;
 

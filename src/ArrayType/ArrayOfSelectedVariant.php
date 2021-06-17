@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ArrayType;
+namespace BenefiaNew\ArrayType;
 
+use BenefiaNew\StructType\SelectedVariant;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -19,13 +20,13 @@ class ArrayOfSelectedVariant extends AbstractStructArrayBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - nillable: true
-     * @var \StructType\SelectedVariant[]
+     * @var \BenefiaNew\StructType\SelectedVariant[]
      */
     protected array $SelectedVariant = [];
     /**
      * Constructor method for ArrayOfSelectedVariant
      * @uses ArrayOfSelectedVariant::setSelectedVariant()
-     * @param \StructType\SelectedVariant[] $selectedVariant
+     * @param \BenefiaNew\StructType\SelectedVariant[] $selectedVariant
      */
     public function __construct(array $selectedVariant = [])
     {
@@ -37,7 +38,7 @@ class ArrayOfSelectedVariant extends AbstractStructArrayBase
      * An additional test has been added (isset) before returning the property value as
      * this property may have been unset before, due to the fact that this property is
      * removable from the request (nillable=true+minOccurs=0)
-     * @return \StructType\SelectedVariant[]
+     * @return \BenefiaNew\StructType\SelectedVariant[]
      */
     public function getSelectedVariant(): ?array
     {
@@ -71,8 +72,8 @@ class ArrayOfSelectedVariant extends AbstractStructArrayBase
      * This property is removable from request (nillable=true+minOccurs=0), therefore
      * if the value assigned to this property is null, it is removed from this object
      * @throws InvalidArgumentException
-     * @param \StructType\SelectedVariant[] $selectedVariant
-     * @return \ArrayType\ArrayOfSelectedVariant
+     * @param \BenefiaNew\StructType\SelectedVariant[] $selectedVariant
+     * @return \BenefiaNew\ArrayType\ArrayOfSelectedVariant
      */
     public function setSelectedVariant(array $selectedVariant = []): self
     {
@@ -91,9 +92,9 @@ class ArrayOfSelectedVariant extends AbstractStructArrayBase
     /**
      * Returns the current element
      * @see AbstractStructArrayBase::current()
-     * @return \StructType\SelectedVariant|null
+     * @return \BenefiaNew\StructType\SelectedVariant|null
      */
-    public function current(): ?\StructType\SelectedVariant
+    public function current(): ?SelectedVariant
     {
         return parent::current();
     }
@@ -101,27 +102,27 @@ class ArrayOfSelectedVariant extends AbstractStructArrayBase
      * Returns the indexed element
      * @see AbstractStructArrayBase::item()
      * @param int $index
-     * @return \StructType\SelectedVariant|null
+     * @return \BenefiaNew\StructType\SelectedVariant|null
      */
-    public function item($index): ?\StructType\SelectedVariant
+    public function item($index): ?SelectedVariant
     {
         return parent::item($index);
     }
     /**
      * Returns the first element
      * @see AbstractStructArrayBase::first()
-     * @return \StructType\SelectedVariant|null
+     * @return \BenefiaNew\StructType\SelectedVariant|null
      */
-    public function first(): ?\StructType\SelectedVariant
+    public function first(): ?SelectedVariant
     {
         return parent::first();
     }
     /**
      * Returns the last element
      * @see AbstractStructArrayBase::last()
-     * @return \StructType\SelectedVariant|null
+     * @return \BenefiaNew\StructType\SelectedVariant|null
      */
-    public function last(): ?\StructType\SelectedVariant
+    public function last(): ?SelectedVariant
     {
         return parent::last();
     }
@@ -129,9 +130,9 @@ class ArrayOfSelectedVariant extends AbstractStructArrayBase
      * Returns the element at the offset
      * @see AbstractStructArrayBase::offsetGet()
      * @param int $offset
-     * @return \StructType\SelectedVariant|null
+     * @return \BenefiaNew\StructType\SelectedVariant|null
      */
-    public function offsetGet($offset): ?\StructType\SelectedVariant
+    public function offsetGet($offset): ?SelectedVariant
     {
         return parent::offsetGet($offset);
     }
@@ -139,13 +140,13 @@ class ArrayOfSelectedVariant extends AbstractStructArrayBase
      * Add element to array
      * @see AbstractStructArrayBase::add()
      * @throws InvalidArgumentException
-     * @param \StructType\SelectedVariant $item
-     * @return \ArrayType\ArrayOfSelectedVariant
+     * @param \BenefiaNew\StructType\SelectedVariant $item
+     * @return \BenefiaNew\ArrayType\ArrayOfSelectedVariant
      */
     public function add($item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\SelectedVariant) {
+        if (!$item instanceof SelectedVariant) {
             throw new InvalidArgumentException(sprintf('The SelectedVariant property can only contain items of type \StructType\SelectedVariant, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         return parent::add($item);

@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ServiceType;
+namespace BenefiaNew\ServiceType;
 
+use BenefiaNew\StructType\PrintApplication;
+use BenefiaNew\StructType\PrintCalculation;
+use BenefiaNew\StructType\PrintPolicy;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -11,7 +14,7 @@ use WsdlToPhp\PackageBase\AbstractSoapClientBase;
  * This class stands for Print ServiceType
  * @subpackage Services
  */
-class _Print extends AbstractSoapClientBase
+class Print extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named PrintCalculation
@@ -21,7 +24,7 @@ class _Print extends AbstractSoapClientBase
      * @param \StructType\PrintCalculation $parameters
      * @return \StructType\PrintCalculationResponse|bool
      */
-    public function PrintCalculation(\StructType\PrintCalculation $parameters)
+    public function PrintCalculation(PrintCalculation $parameters)
     {
         try {
             $this->setResult($resultPrintCalculation = $this->getSoapClient()->__soapCall('PrintCalculation', [
@@ -43,7 +46,7 @@ class _Print extends AbstractSoapClientBase
      * @param \StructType\PrintApplication $parameters
      * @return \StructType\PrintApplicationResponse|bool
      */
-    public function PrintApplication(\StructType\PrintApplication $parameters)
+    public function PrintApplication(PrintApplication $parameters)
     {
         try {
             $this->setResult($resultPrintApplication = $this->getSoapClient()->__soapCall('PrintApplication', [
@@ -65,7 +68,7 @@ class _Print extends AbstractSoapClientBase
      * @param \StructType\PrintPolicy $parameters
      * @return \StructType\PrintPolicyResponse|bool
      */
-    public function PrintPolicy(\StructType\PrintPolicy $parameters)
+    public function PrintPolicy(PrintPolicy $parameters)
     {
         try {
             $this->setResult($resultPrintPolicy = $this->getSoapClient()->__soapCall('PrintPolicy', [

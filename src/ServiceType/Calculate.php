@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ServiceType;
+namespace BenefiaNew\ServiceType;
 
+use BenefiaNew\StructType\Calculate;
+use BenefiaNew\StructType\CalculateApplication;
+use BenefiaNew\StructType\CalculateMultioffer;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -21,7 +24,7 @@ class Calculate extends AbstractSoapClientBase
      * @param \StructType\Calculate $parameters
      * @return \StructType\CalculateResponse|bool
      */
-    public function Calculate(\StructType\Calculate $parameters)
+    public function Calculate(Calculate $parameters)
     {
         try {
             $this->setResult($resultCalculate = $this->getSoapClient()->__soapCall('Calculate', [
@@ -43,7 +46,7 @@ class Calculate extends AbstractSoapClientBase
      * @param \StructType\CalculateApplication $parameters
      * @return \StructType\CalculateApplicationResponse|bool
      */
-    public function CalculateApplication(\StructType\CalculateApplication $parameters)
+    public function CalculateApplication(CalculateApplication $parameters)
     {
         try {
             $this->setResult($resultCalculateApplication = $this->getSoapClient()->__soapCall('CalculateApplication', [
@@ -65,7 +68,7 @@ class Calculate extends AbstractSoapClientBase
      * @param \StructType\CalculateMultioffer $parameters
      * @return \StructType\CalculateMultiofferResponse|bool
      */
-    public function CalculateMultioffer(\StructType\CalculateMultioffer $parameters)
+    public function CalculateMultioffer(CalculateMultioffer $parameters)
     {
         try {
             $this->setResult($resultCalculateMultioffer = $this->getSoapClient()->__soapCall('CalculateMultioffer', [

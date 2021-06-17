@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\EnumType\ConsentCollectingStage;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
+
 
 /**
  * This class stands for Consent StructType
@@ -83,7 +85,7 @@ class Consent extends AbstractStructBase
     public function setCollectingStage(?string $collectingStage = null): self
     {
         // validation for constraint: enumeration
-        if (!\EnumType\ConsentCollectingStage::valueIsValid($collectingStage)) {
+        if (!ConsentCollectingStage::valueIsValid($collectingStage)) {
             throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\ConsentCollectingStage', is_array($collectingStage) ? implode(', ', $collectingStage) : var_export($collectingStage, true), implode(', ', \EnumType\ConsentCollectingStage::getValidValues())), __LINE__);
         }
         $this->CollectingStage = $collectingStage;

@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\StructType\GetApplicationStatusResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -20,13 +21,13 @@ class GetApplicationStatusResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\GetApplicationStatusResult|null
      */
-    protected ?\StructType\GetApplicationStatusResult $GetApplicationStatusResult = null;
+    protected ?GetApplicationStatusResult $GetApplicationStatusResult = null;
     /**
      * Constructor method for GetApplicationStatusResponse
      * @uses GetApplicationStatusResponse::setGetApplicationStatusResult()
      * @param \StructType\GetApplicationStatusResult $getApplicationStatusResult
      */
-    public function __construct(?\StructType\GetApplicationStatusResult $getApplicationStatusResult = null)
+    public function __construct(?GetApplicationStatusResult $getApplicationStatusResult = null)
     {
         $this
             ->setGetApplicationStatusResult($getApplicationStatusResult);
@@ -35,7 +36,7 @@ class GetApplicationStatusResponse extends AbstractStructBase
      * Get GetApplicationStatusResult value
      * @return \StructType\GetApplicationStatusResult|null
      */
-    public function getGetApplicationStatusResult(): ?\StructType\GetApplicationStatusResult
+    public function getGetApplicationStatusResult(): ?GetApplicationStatusResult
     {
         return $this->GetApplicationStatusResult;
     }
@@ -44,7 +45,7 @@ class GetApplicationStatusResponse extends AbstractStructBase
      * @param \StructType\GetApplicationStatusResult $getApplicationStatusResult
      * @return \StructType\GetApplicationStatusResponse
      */
-    public function setGetApplicationStatusResult(?\StructType\GetApplicationStatusResult $getApplicationStatusResult = null): self
+    public function setGetApplicationStatusResult(?GetApplicationStatusResult $getApplicationStatusResult = null): self
     {
         $this->GetApplicationStatusResult = $getApplicationStatusResult;
         

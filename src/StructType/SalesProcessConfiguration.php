@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace BenefiaNew\StructType;
 
+use BenefiaNew\ArrayType\ArrayOfConsent;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,13 +24,13 @@ class SalesProcessConfiguration extends AbstractStructBase
      * - nillable: true
      * @var \ArrayType\ArrayOfConsent|null
      */
-    protected ?\ArrayType\ArrayOfConsent $Consents = null;
+    protected ?ArrayOfConsent $Consents = null;
     /**
      * Constructor method for SalesProcessConfiguration
      * @uses SalesProcessConfiguration::setConsents()
      * @param \ArrayType\ArrayOfConsent $consents
      */
-    public function __construct(?\ArrayType\ArrayOfConsent $consents = null)
+    public function __construct(?ArrayOfConsent $consents = null)
     {
         $this
             ->setConsents($consents);
@@ -41,7 +42,7 @@ class SalesProcessConfiguration extends AbstractStructBase
      * removable from the request (nillable=true+minOccurs=0)
      * @return \ArrayType\ArrayOfConsent|null
      */
-    public function getConsents(): ?\ArrayType\ArrayOfConsent
+    public function getConsents(): ?ArrayOfConsent
     {
         return isset($this->Consents) ? $this->Consents : null;
     }
@@ -52,7 +53,7 @@ class SalesProcessConfiguration extends AbstractStructBase
      * @param \ArrayType\ArrayOfConsent $consents
      * @return \StructType\SalesProcessConfiguration
      */
-    public function setConsents(?\ArrayType\ArrayOfConsent $consents = null): self
+    public function setConsents(?ArrayOfConsent $consents = null): self
     {
         if (is_null($consents) || (is_array($consents) && empty($consents))) {
             unset($this->Consents);
