@@ -14,7 +14,7 @@ use WsdlToPhp\PackageBase\AbstractSoapClientBase;
  * This class stands for Print ServiceType
  * @subpackage Services
  */
-class Print extends AbstractSoapClientBase
+class PrintService extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named PrintCalculation
