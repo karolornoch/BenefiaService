@@ -22,7 +22,7 @@ class Calculate extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\Input|null
      */
-    protected ?\StructType\Input $input = null;
+    protected ?Input $input = null;
     /**
      * The additionalProcessData
      * Meta information extracted from the WSDL
@@ -30,7 +30,7 @@ class Calculate extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\AdditionalSalesProcessData|null
      */
-    protected ?\StructType\AdditionalSalesProcessData $additionalProcessData = null;
+    protected ?AdditionalSalesProcessData $additionalProcessData = null;
     /**
      * Constructor method for Calculate
      * @uses Calculate::setInput()
