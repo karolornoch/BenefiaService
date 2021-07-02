@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace BenefiaNew\ArrayType;
 
+use BenefiaNew\StructType\Consent;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -58,7 +59,7 @@ class ArrayOfConsent extends AbstractStructArrayBase
         $invalidValues = [];
         foreach ($values as $arrayOfConsentConsentItem) {
             // validation for constraint: itemType
-            if (!$arrayOfConsentConsentItem instanceof \StructType\Consent) {
+            if (!$arrayOfConsentConsentItem instanceof Consent) {
                 $invalidValues[] = is_object($arrayOfConsentConsentItem) ? get_class($arrayOfConsentConsentItem) : sprintf('%s(%s)', gettype($arrayOfConsentConsentItem), var_export($arrayOfConsentConsentItem, true));
             }
         }
@@ -96,7 +97,7 @@ class ArrayOfConsent extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::current()
      * @return \StructType\Consent|null
      */
-    public function current(): ?\StructType\Consent
+    public function current(): ?Consent
     {
         return parent::current();
     }
@@ -106,7 +107,7 @@ class ArrayOfConsent extends AbstractStructArrayBase
      * @param int $index
      * @return \StructType\Consent|null
      */
-    public function item($index): ?\StructType\Consent
+    public function item($index): ?Consent
     {
         return parent::item($index);
     }
@@ -115,7 +116,7 @@ class ArrayOfConsent extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::first()
      * @return \StructType\Consent|null
      */
-    public function first(): ?\StructType\Consent
+    public function first(): ?Consent
     {
         return parent::first();
     }
@@ -124,7 +125,7 @@ class ArrayOfConsent extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::last()
      * @return \StructType\Consent|null
      */
-    public function last(): ?\StructType\Consent
+    public function last(): ?Consent
     {
         return parent::last();
     }
@@ -134,7 +135,7 @@ class ArrayOfConsent extends AbstractStructArrayBase
      * @param int $offset
      * @return \StructType\Consent|null
      */
-    public function offsetGet($offset): ?\StructType\Consent
+    public function offsetGet($offset): ?Consent
     {
         return parent::offsetGet($offset);
     }
@@ -148,7 +149,7 @@ class ArrayOfConsent extends AbstractStructArrayBase
     public function add($item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\Consent) {
+        if (!$item instanceof Consent) {
             throw new InvalidArgumentException(sprintf('The Consent property can only contain items of type \StructType\Consent, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         return parent::add($item);

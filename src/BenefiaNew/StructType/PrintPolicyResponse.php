@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace BenefiaNew\StructType;
 
-use BenefiaNew\StructType\PrintPolicyResult
+use BenefiaNew\StructType\PrintPolicyResult;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 

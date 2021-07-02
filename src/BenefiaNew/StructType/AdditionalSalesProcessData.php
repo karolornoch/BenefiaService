@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace BenefiaNew\StructType;
 
 use BenefiaNew\ArrayType\ArrayOfConsentResult;
-use BenefiaNew\ArrayType\MultiofferData;
+use BenefiaNew\StructType\MultiofferData;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 

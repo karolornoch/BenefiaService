@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace BenefiaNew\ServiceType;
 
+use BenefiaNew\StructType\MakeInstallmentPayment;
 use BenefiaNew\StructType\MakePayment;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;

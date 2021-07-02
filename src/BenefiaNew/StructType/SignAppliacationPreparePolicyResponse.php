@@ -20,13 +20,13 @@ class SignAppliacationPreparePolicyResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\SignAppliacationPreparePolicyResult|null
      */
-    protected ?\StructType\SignAppliacationPreparePolicyResult $SignAppliacationPreparePolicyResult = null;
+    protected ?SignAppliacationPreparePolicyResult $SignAppliacationPreparePolicyResult = null;
     /**
      * Constructor method for SignAppliacationPreparePolicyResponse
      * @uses SignAppliacationPreparePolicyResponse::setSignAppliacationPreparePolicyResult()
      * @param \StructType\SignAppliacationPreparePolicyResult $signAppliacationPreparePolicyResult
      */
-    public function __construct(?\StructType\SignAppliacationPreparePolicyResult $signAppliacationPreparePolicyResult = null)
+    public function __construct(?SignAppliacationPreparePolicyResult $signAppliacationPreparePolicyResult = null)
     {
         $this
             ->setSignAppliacationPreparePolicyResult($signAppliacationPreparePolicyResult);
@@ -35,7 +35,7 @@ class SignAppliacationPreparePolicyResponse extends AbstractStructBase
      * Get SignAppliacationPreparePolicyResult value
      * @return \StructType\SignAppliacationPreparePolicyResult|null
      */
-    public function getSignAppliacationPreparePolicyResult(): ?\StructType\SignAppliacationPreparePolicyResult
+    public function getSignAppliacationPreparePolicyResult(): ?SignAppliacationPreparePolicyResult
     {
         return $this->SignAppliacationPreparePolicyResult;
     }
@@ -44,7 +44,7 @@ class SignAppliacationPreparePolicyResponse extends AbstractStructBase
      * @param \StructType\SignAppliacationPreparePolicyResult $signAppliacationPreparePolicyResult
      * @return \StructType\SignAppliacationPreparePolicyResponse
      */
-    public function setSignAppliacationPreparePolicyResult(?\StructType\SignAppliacationPreparePolicyResult $signAppliacationPreparePolicyResult = null): self
+    public function setSignAppliacationPreparePolicyResult(?SignAppliacationPreparePolicyResult $signAppliacationPreparePolicyResult = null): self
     {
         $this->SignAppliacationPreparePolicyResult = $signAppliacationPreparePolicyResult;
         
